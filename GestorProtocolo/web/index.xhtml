@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login: Só de Cenoura</title>
+    </h:head>
+    <h:body>
+        <h:form id="frmLogin" prependId="false">
+            <h:messages id="msgGeral" globalOnly="true" showDetail="true"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Login (e-mail):" id="lblLogin" for="email"/>
+                <h:inputText id="email" value="#{loginBean.usuario.email}"/>
+                <h:outputLabel value="Senha:" id="lblSenha" for="senha"/>
+                <h:inputSecret id="senha" value="#{loginBean.usuario.senha}"/>
+                <h:commandButton id="btnLogar" value="logar" action="#{loginBean.logar}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
